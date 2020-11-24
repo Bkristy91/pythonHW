@@ -26,7 +26,7 @@ else:
     else:
         if newRank > listRating[0]:
             listRating.insert(0, newRank)
-        elif newRank < listRating[0]:
+        elif newRank < listRating[-1]:
             listRating.append(newRank)
 
 print(listRating)
