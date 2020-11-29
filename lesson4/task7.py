@@ -8,12 +8,13 @@
 
 from math import factorial
 
-# второй вариант, встроеная функция факториал
+userNumber = int(input('Введите число, до которого требуется сгенерировать факториал: '))
+
 def fact(n):
     for el in range(1, n + 1):
         yield factorial(el)
 
-g = fact(userNumber)
+g = (el for el in fact(userNumber))
 print(g)
 
 for el in g:
