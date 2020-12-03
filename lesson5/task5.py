@@ -18,12 +18,9 @@ with open('my_file_numb.txt', 'w') as f_obj:
         print(random.randint(0, 10), end=' ', file=f_obj)
 
 listNumb = list()
-sum = 0
 with open('my_file_numb.txt', 'r') as f_obj:
     for line in f_obj:
         for el in line.split():
             listNumb.append(int(el))
-            sum += int(el)
 
 print(reduce(my_sum, listNumb))
-print(sum)
